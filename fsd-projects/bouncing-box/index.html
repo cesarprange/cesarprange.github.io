@@ -76,11 +76,12 @@ var speed = 10
 			turn it around! 
 			*/
 			function update() {
-				positionX = positionX + speed
 				moveBoxTo(positionX)
+				positionX = positionX + speed
+				
 				if (positionX > boardWidth) {
 					speed = speed * -1;
-				} if (positionX < 0) {
+				} else if (positionX < 0) {
 					 speed *= -1;
 				}
 
@@ -93,9 +94,10 @@ var speed = 10
 			*/
 			function handleBoxClick() {
 positionX  = 0
-points++ 1;
-changeBoxText(points)
+points++ ;
 speed  = 3 * points + 10;
+changeBoxText(points)
+
 			};
 
 
