@@ -36,12 +36,9 @@ var init = function (window) {
         
 
         // TODO 3 : Call the drawCircle() function
-
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
+for (var i = 0; i < 5; i++) {
+    drawCircle();
+}
         
 
         // TODO 7 : Use a loop to create multiple circles
