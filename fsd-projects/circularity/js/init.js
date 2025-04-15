@@ -102,21 +102,22 @@ var init = function (window) {
         // --- NO CODE BELOW HERE  --- DO NOT REMOVE THIS CODE --- //
         /////////////////////////////////////////////////////////////
         
-        view.addChild(fps);
-        app.addUpdateable(fps);
-        
-        game.circle = circle;
-        game.circles = circles;
-        game.drawCircle = drawCircle;
-        game.update = update;
-        
-        app.addUpdateable(window.opspark.game);
-    }
-};
-
-// DO NOT REMOVE THIS CODE //////////////////////////////////////////////////////
-if((typeof process !== 'undefined') &&
-    (typeof process.versions.node !== 'undefined')) {
-    // here, export any references you need for tests //
-    module.exports = init;
-}
+     view.addChild(fps);
+             app.addUpdateable(fps);
+            
+             game.circle = circle;
+             game.circles = circles;
+             game.drawCircle = drawCircle;
+             game.update = update;
+            
+             app.addUpdateable(window.opspark.game);
+         }
+     };
+     
+     // DO NOT REMOVE THIS CODE //////////////////////////////////////////////////////
+     if((typeof process !== 'undefined') &&
+         (typeof process.versions.node !== 'undefined')) {
+         // here, export any references you need for tests //
+         module.exports = init;
+     }
+     
