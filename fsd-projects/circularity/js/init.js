@@ -124,3 +124,4 @@ if((typeof process !== 'undefined') &&
     module.exports = init;
 }
 }
+// git commit -m "completed circularity project"
