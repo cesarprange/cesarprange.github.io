@@ -35,13 +35,8 @@ var init = function (window) {
         }
         
 
-        // TODO 3 : Call the drawCircle() function
 
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
+        
 
         // TODO 7 : Use a loop to create multiple circles
 
@@ -61,30 +56,16 @@ var init = function (window) {
         and check to see if it has drifted off the screen.         
         */
         function update() {
-            // TODO 4 : Update the position of each circle using physikz.updatePosition()
-            
-          //  physikz.updatePosition(circles[0]);
-          //  physikz.updatePosition(circles[1]);
-            //physikz.updatePosition(circles[2]);
-            //physikz.updatePosition(circles[3]);
-            //physikz.updatePosition(circles[4]);
-            
-            
-            // TODO 5 : Call game.checkCirclePosition() on your circles
-           
-         //   game.checkCirclePosition(circles[0]);
-            //game.checkCirclePosition(circles[1]);
-           // game.checkCirclePosition(circles[2]);
-         //   game.checkCirclePosition(circles[3]);
-       //     game.checkCirclePosition(circles[4]);
-            
+          
+      
             // TODO 8 / TODO 9 : Iterate over the array
-
+            
             for (var i = 0; i < circles.length; i++) {
-                physikz.updatePosition(circles[i]);
-                game.checkCirclePosition(circles[i]);
+                physikz.updatePosition(circles[i]); // Update each circle's position
+                game.checkCirclePosition(circles[i]); // Ensure each circle stays within the screen boundaries
             }
             
+
     
         /* 
         This Function should check the position of a circle that is passed to the 
@@ -100,20 +81,21 @@ var init = function (window) {
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
             
-            function checkCirclePosition(circle) {
+            game.checkCirclePosition = function(circle) {
                 if (circle.x > canvas.width) {
                     circle.x = 0;
                 }
                 if (circle.x < 0) {
                     circle.x = canvas.width;
                 }
-                if (circle.y < 0) {
-                    circle.y = canvas.height;
-                }
                 if (circle.y > canvas.height) {
                     circle.y = 0;
                 }
-            }
+                if (circle.y < 0) {
+                    circle.y = canvas.height;
+                }
+            };
+            
             
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
@@ -140,4 +122,5 @@ if((typeof process !== 'undefined') &&
     (typeof process.versions.node !== 'undefined')) {
     // here, export any references you need for tests //
     module.exports = init;
+}
 }
